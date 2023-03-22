@@ -10,10 +10,7 @@ namespace CGPA_Calculation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.Write("Students Name: ");
+
             string nam1 = Console.ReadLine();
             Console.Write("Semester: ");
             string sem1 = Console.ReadLine();
@@ -30,9 +27,17 @@ namespace CGPA_Calculation
             Console.Write("Enter your Chemistry score: ");
             double chm1 = Convert.ToDouble(Console.ReadLine());
 
-            double GPA1 = (eng1 + mth1+ his1 + phy1 + ger1 + chm1) / 6;
-            // Console.WriteLine(GPA1 + " is " + nam1 + " score");
 
+            //GPA1();
+            double TotalCunite = 7;
+            double GPA1 = (eng1 + mth1 + his1 + phy1 + ger1 + chm1) / TotalCunite;
+
+            Console.WriteLine("The " + sem1 + " result of " + nam1 + " is " + GPA1);
+            // Console.WriteLine(GPA1()/TotalCunite);
+            //Assignment to write a method that passes those parameters inside 
+            // the main total score divided by the credit unite
+            /*GP is total score didvided by the credit unite
+             so that means*/
             Console.WriteLine();
             Console.WriteLine();
 
@@ -95,7 +100,7 @@ namespace CGPA_Calculation
             else if (his1 > 20)
             {
                 Console.WriteLine("History Grade D");
-            }   
+            }
             else
             {
                 Console.WriteLine("History Grade F");
@@ -172,10 +177,19 @@ namespace CGPA_Calculation
             Console.WriteLine();
 
 
-            Console.WriteLine("The " + sem1 + " result of " + nam1+ " is " + GPA1);
+            
 
 
             Console.ReadLine();
+        }
+
+        /*private static void GPA1(double eng1, double mth1, double his1, double phy1, double ger1, double chm1)
+        {
+            Console.Write(eng1 + mth1 + his1 + phy1 + ger1 + chm1);
+        }*/
+        static double GPA1(double eng1, double mth1, double his1, double phy1, double ger1, double chm1)
+        {
+            return eng1 + mth1 + his1 + phy1 + ger1 + chm1;
         }
     }
 }
